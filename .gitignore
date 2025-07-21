@@ -108,8 +108,8 @@ coverage.xml
 .dmypy.json
 dmypy.json
 
-# ML-Agents environment - EXCLUDE ENTIRE CONDA ENVIRONMENT
-Lib/
+# ML-Agents environment - EXCLUDE CONDA ENVIRONMENT BUT ALLOW CUSTOM MODIFICATIONS
+# Exclude most of the conda environment
 Scripts/
 include/
 DLLs/
@@ -117,4 +117,16 @@ Library/
 libs/
 share/
 Tools/
-conda-meta/ 
+conda-meta/
+
+# Exclude Lib/ but allow our custom modifications
+Lib/*
+!Lib/site-packages/
+Lib/site-packages/*
+!Lib/site-packages/mlagents/
+Lib/site-packages/mlagents/*
+!Lib/site-packages/mlagents/trainers/
+Lib/site-packages/mlagents/trainers/*
+!Lib/site-packages/mlagents/trainers/torch_entities/
+Lib/site-packages/mlagents/trainers/torch_entities/*
+!Lib/site-packages/mlagents/trainers/torch_entities/custom_neurons/ 
