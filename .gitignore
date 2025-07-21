@@ -106,4 +106,15 @@ coverage.xml
 # mypy
 .mypy_cache/
 .dmypy.json
-dmypy.json 
+dmypy.json
+
+# ML-Agents environment - EXCLUDE ENTIRE CONDA ENVIRONMENT
+Lib/
+Scripts/
+include/
+DLLs/
+Library/
+libs/
+share/
+Tools/
+conda-meta/ 
