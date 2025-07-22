@@ -120,13 +120,8 @@ Tools/
 conda-meta/
 
 # Exclude Lib/ but allow our custom modifications
-Lib/*
-!Lib/site-packages/
-Lib/site-packages/*
-!Lib/site-packages/mlagents/
-Lib/site-packages/mlagents/*
-!Lib/site-packages/mlagents/trainers/
-Lib/site-packages/mlagents/trainers/*
-!Lib/site-packages/mlagents/trainers/torch_entities/
-Lib/site-packages/mlagents/trainers/torch_entities/*
-!Lib/site-packages/mlagents/trainers/torch_entities/custom_neurons/ 
+# Simple approach: exclude Lib/ but explicitly include our custom neurons
+Lib/
+!Lib/site-packages/mlagents/trainers/torch_entities/custom_neurons/
+# But exclude __pycache__ from our custom neurons
+Lib/site-packages/mlagents/trainers/torch_entities/custom_neurons/__pycache__/ 
